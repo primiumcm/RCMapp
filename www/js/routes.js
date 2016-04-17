@@ -6,22 +6,30 @@ angular.module('app.routes', [])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
-    
-  
+  $stateProvider  
 
-      .state('menu.rCM', {
-    url: '/page1',
+  .state('menu.login', {
+    url: '/pageLogin',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/rCM.html',
-        controller: 'rCMCtrl'
+        templateUrl: 'templates/login.html',
+        controller: 'loginCtrl'
+      }
+    }
+  })
+
+  .state('menu.perfil', {
+    url: '/pagePerfil',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/perfil.html',
+        controller: 'perfilCtrl'
       }
     }
   })
 
   .state('menu.noticias', {
-    url: '/page2',
+    url: '/pageNoticias',
     views: {
       'side-menu21': {
         templateUrl: 'templates/noticias.html',
@@ -31,7 +39,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.actividades', {
-    url: '/page3',
+    url: '/pageActividades',
     views: {
       'side-menu21': {
         templateUrl: 'templates/actividades.html',
@@ -41,7 +49,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.tiempo', {
-    url: '/page4',
+    url: '/pageTiempo',
     views: {
       'side-menu21': {
         templateUrl: 'templates/tiempo.html',
@@ -50,22 +58,22 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.registroDeUsuarios', {
-    url: '/page6',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/registroDeUsuarios.html',
-        controller: 'registroDeUsuariosCtrl'
-      }
-    }
-  })
-
   .state('menu.nosotros', {
-    url: '/page5',
+    url: '/pageNosotros',
     views: {
       'side-menu21': {
         templateUrl: 'templates/nosotros.html',
         controller: 'nosotrosCtrl'
+      }
+    }
+  })
+
+  .state('menu.socios', {
+    url: '/pageSocios',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/socios.html',
+        controller: 'sociosCtrl'
       }
     }
   })
@@ -76,8 +84,7 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page1')
-
+$urlRouterProvider.otherwise('/side-menu21/pageLogin')
   
 
 });

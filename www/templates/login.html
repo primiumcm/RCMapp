@@ -1,17 +1,16 @@
-<ion-view title="RCM" id="page1">
+<ion-view title="RCM" id="pageLogin">
     <ion-content padding="true" class="has-header">
         <form class="list"></form>
         <form class="list">
             <label class="item item-input" name="txtUsuario">
                 <span class="input-label">Usuario</span>
-                <input type="text" placeholder="">
+                <input type="text" ng-model="user.email" placeholder="">
             </label>
             <label class="item item-input" name="txtPassword">
                 <span class="input-label">Clave</span>
-                <input type="password" placeholder="">
+                <input type="password" ng-model="user.pwdForLogin" placeholder="">
             </label>
         </form>
-        <button id="rCM-button1" class="button button-positive  button-block">Entrar</button>
-        <a ui-sref="menu.registroDeUsuarios" id="rCM-button2" class="button button-calm  button-block">Nuevo usuario</a>
+        <button id="login-button1" ng-click="signIn(user)" class="button button-positive  button-block">Entrar</button>
     </ion-content>
 </ion-view>
